@@ -1,0 +1,31 @@
+/* Estilos personalizados para o site */
+
+.hero-bg {
+  background: -webkit-linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('../images/hero.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('../images/hero.png') center/cover no-repeat;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 50;
+}
+
+.tail-container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsividade adicional com webkit */
+@media screen and (max-width: 768px) {
+  .hero-bg {
+    background-attachment: scroll; /* Para webkit */
+    -webkit-background-attachment: scroll;
+  }
+  .tail-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
