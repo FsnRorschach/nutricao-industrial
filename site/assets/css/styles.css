@@ -17,15 +17,3 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-/* Responsividade adicional com webkit */
-@media screen and (max-width: 768px) {
-  .hero-bg {
-    background-attachment: scroll; /* Para webkit */
-    -webkit-background-attachment: scroll;
-  }
-  .tail-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}

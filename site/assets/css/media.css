@@ -1,0 +1,98 @@
+/* Media Queries e Responsividade */
+
+/* ===== MOBILE PHONE (até 768px) ===== */
+@media screen and (max-width: 767px) {
+  /* Hero */
+  .hero-bg {
+    background-attachment: scroll; /* Para webkit */
+    -webkit-background-attachment: scroll;
+  }
+
+  /* Logo da Hero - ESCONDIDO em mobile phone */
+  .hero-bg img {
+    display: none;
+  }
+
+  /* Container e espaçamento */
+  .tail-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Centralizar botões */
+  .hero-bg .flex.flex-wrap {
+    justify-content: center;
+  }
+
+  /* Forçar texto acima das divs em mobile - grid para 1 coluna */
+  .grid.md\:grid-cols-2,
+  .grid.md\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Garantir que grids filhas de sections fiquem em 1 coluna */
+  section:not(.hero-bg) .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== MOBILE TABLET (768px até 1024px) ===== */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Logo da Hero - CENTRALIZADO e MENOR no tablet */
+  .hero-bg img {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 14rem; /* 256px - um pouco menor */
+    height: 14rem;
+    margin: 0 auto 2rem auto;
+    display: block;
+    opacity: 0.8;
+  }
+
+  /* Ajustar a posição do texto para ficar abaixo da logo */
+  .hero-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Centralizar botões */
+  .hero-bg .flex.flex-wrap {
+    justify-content: center;
+  }
+
+  .tail-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  /* Forçar texto acima das divs em tablet - grid para 1 coluna */
+  .grid.md\:grid-cols-2,
+  .grid.md\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Garantir que grids filhas da hero-section fiquem em 1 coluna */
+  section:not(.hero-bg) .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ===== DESKTOP (1024px +) ===== */
+@media screen and (min-width: 1024px) {
+  /* Centralizar botões */
+  .hero-bg .flex.flex-wrap {
+    justify-content: center;
+  }
+
+  .hero-bg img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+}
