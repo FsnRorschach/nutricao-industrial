@@ -8,9 +8,9 @@
     -webkit-background-attachment: scroll;
   }
 
-  /* Logo da Hero - ESCONDIDO em mobile phone */
-  .hero-bg img {
-    display: none;
+  /* Logo da Hero - exibido em mobile phone */
+  .hero-bg .hero-logo {
+    display: block;
   }
 
   /* Container e espaçamento */
@@ -39,7 +39,7 @@
 /* ===== MOBILE TABLET (768px até 1024px) ===== */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   /* Logo da Hero - CENTRALIZADO e MENOR no tablet */
-  .hero-bg img {
+  .hero-bg .hero-logo {
     position: relative !important;
     top: auto !important;
     left: auto !important;
@@ -90,7 +90,7 @@
     justify-content: center;
   }
 
-  .hero-bg img {
+  .hero-bg .hero-logo {
     position: absolute;
     top: 1rem;
     left: 1rem;
